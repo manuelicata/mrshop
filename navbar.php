@@ -10,7 +10,12 @@
     
 <?php 
 
-//var_dump($_SERVER['PHP_SELF']);
+/*
+ * var_dump($_SERVER['PHP_SELF']);
+ * 
+ * togliendo il commento vedrai il dump del parametro PHP_SELF della variabile globale $_SERVER
+ * il parametro è riferito all'URL della pagina a video
+ */
 
 ?>
     
@@ -52,3 +57,23 @@
 </nav>
 </body>
 </html> 
+
+
+
+<?php
+
+
+/*
+ * <?= stristr($_SERVER['PHP_SELF'],'contatti')?'active':'';
+ * 
+ *  quando vedrai <?= viene aperto php con un echo 
+ *  sarebbe lo stesso scrivere <?php echo ... ?>, serve per accorciare il codice
+ * 
+ *  la funzione stristr( $var, $needle )  fa un controllo delle stringhe della variabile, nel nostro caso $_SERVER['PHP_SELF']
+ *  se nella variabile è contenuta la parola 'contatti' allora la funzione stristr ritorna 'active', se non è presente ritorna '' = NULL
+ *  
+ * quindi, in parole povere se nel link è presente la parola dopo la virgola allora viene fatto l'echo di active 
+ * quindi la classe diventerà class="nav-link active", mettendo in risalto il link di riferimento
+ * 
+*/
+?>
